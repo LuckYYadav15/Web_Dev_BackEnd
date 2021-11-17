@@ -1,6 +1,7 @@
 // to be used in file_3
 const rahul = "Rahul";
 const roll = "15";
+
 module.exports = {rahul , roll};
 
 const amount = 37

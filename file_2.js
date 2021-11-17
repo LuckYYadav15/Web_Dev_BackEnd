@@ -1,5 +1,5 @@
 // Modules
-
+// "fun" to be used in file_3 also
 const fun = (name)=>{
     console.log(`Hello ${name}`);
 }
@@ -13,4 +13,5 @@ setInterval(()=>
 {
     fun("Hit");
 },1000);
-module.exports = fun;
+
+module.exports = fun;      // exporting function
