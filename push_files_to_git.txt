@@ -1,0 +1,12 @@
+how to push files to github
+
+git init
+git status (untracked files)
+git add -A 
+git status (no commits yet)
+git commit -am "comment"
+git status (nothing to commit, working tree clean)
+
+git remote add origin https://github.com/LuckYYadav15/NodeJs.git
+git branch -M main
+git push -u origin main
