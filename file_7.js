@@ -1,3 +1,5 @@
+// Read and Writing files
+// Asynchorous method
 const {readFile, writeFile} = require('fs')
 
 console.log("start.");

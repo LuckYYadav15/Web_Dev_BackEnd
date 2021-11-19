@@ -3,3 +3,4 @@ module.exports.fun = {
     name: "Name",
     roll: "roll",
 }
+//database to be used in other files

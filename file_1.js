@@ -1,4 +1,7 @@
 // to be used in file_3
+// node file_1.js
+// nodemon file_1.js
+
 const rahul = "Rahul";
 const roll = "15";
 

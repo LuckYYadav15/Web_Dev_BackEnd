@@ -1,4 +1,5 @@
 // Read and write file
+// synchorous way
 const {readFileSync, writeFileSync, chownSync} = require('fs');
 
 const first = readFileSync('./content/c_file_1.txt','utf-8');
