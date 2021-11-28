@@ -15,7 +15,7 @@ router.get('/',(req, res, next) => {
     // res.sendFile(path.join(rootDir,'views','shop.html'));
 
     // sending to pug file
-    res.render('shop',{prods: products, docTitle: 'Shop'});   // shop.pug
+    res.render('shop',{prods: products, pageTitle: 'Shop', path : '/'});   // shop.pug
 });
 
 module.exports = router;
