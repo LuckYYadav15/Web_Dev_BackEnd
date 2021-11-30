@@ -1,20 +1,20 @@
-.product-form{
+.product_form{
     width: 20rem;
     max-width: 90%;
     margin: auto;
 }
 
-.form-control{
+.form_control{
     margin: 1rem 0;
 }
 
-.form-control label,
-.form-control input{
+.form_control label,
+.form_control input{
     display: block;
     width: 100%;
 }
 
-.form-control input{
+.form_control input{
     border: 1px solid #dbc819;
     font:inherit;
     border-radius: 2px;

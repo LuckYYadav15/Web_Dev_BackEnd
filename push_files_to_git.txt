@@ -15,3 +15,5 @@ git push -u origin main
 git checkout -b "branch_name"   (create new branch)
 
 git switch "branch_name"        (switch to other branch)
+
+git push --set-upstream origin master   (push to master branch)
