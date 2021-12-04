@@ -15,7 +15,7 @@ module.exports = class Product {
   // its a promise so we need to return a value
   save() {
     return db.execute('INSERT INTO products (title, price, imageUrl, description) VALUES(?, ?, ?, ?)',
-    [this.title, this.price, this.imageUrl, this.description]); // inserting elements
+      [this.title, this.price, this.imageUrl, this.description]); // inserting elements
   }
 
   static deleteById(id) {
@@ -26,5 +26,6 @@ module.exports = class Product {
   }
 
   static findById(id, cb) {
-};
+    return db.execute('SELECT * FROM products WHERE products.id = ?', [id]);
+  };
 }
