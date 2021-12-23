@@ -7,13 +7,13 @@ git status (no commits yet)
 git commit -am "comment"
 git status (nothing to commit, working tree clean)
 
-
 git push -u origin main
 
-
-
+---------------------------------------------------
 git checkout -b "branch_name"   (create new branch)
-
+---------------------------------------------------
 git switch "branch_name"        (switch to other branch)
-
+--------------------------------------------------------
 git push --set-upstream origin master   (push to master branch)
+--------------------------------------------------------
+git clone "repo link"      (to clone a repo in system)
