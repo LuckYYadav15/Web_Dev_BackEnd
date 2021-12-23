@@ -4,21 +4,21 @@ const Cart = require('../models/cart');
 // products page
 exports.getProducts = (req, res, next) => {
   Product.findAll()
-  .then(products => {
-    res.render('shop/index', {
-      prods: products,
-      pageTitle: 'Shop',
-      path: '/products'
-    });
-  })
-  .catch(err => console.log(err));
+    .then(products => {
+      res.render('shop/product-list', {
+        prods: products,
+        pageTitle: 'All Products',
+        path: '/products'
+      });
+    })
+    .catch(err => console.log(err));
 };
 
 //details
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
   Product.findById(prodId)
-    .then(([product]) => {
+    .then(product => {
       res.render('shop/product-detail', {
         product: product[0],
         pageTitle: product.title,
