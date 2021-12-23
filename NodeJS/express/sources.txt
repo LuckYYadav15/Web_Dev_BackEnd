@@ -1,0 +1,1 @@
+setting up server example: https://hn.algolia.com/api
