@@ -37,7 +37,7 @@ mongoose
     'mongodb+srv://User-1:1@cluster0.4opu0.mongodb.net/shop?retryWrites=true&w=majority'
   )
   .then(result => {
-    user.findOne().then(user => {
+    User.findOne().then(user => {
       if (!user) {
         const user = new User({
           name: 'Raw',
