@@ -21,7 +21,7 @@ exports.postAddProduct = (req, res, next) => {
     userId: req.user
   });
   product
-    .save()
+    .save() // method available in mongoose
     .then(result => {
       // console.log(result);
       console.log('Created Product');
@@ -66,7 +66,7 @@ exports.postEditProduct = (req, res, next) => {
       product.price = updatedPrice;
       product.description = updatedDesc;
       product.imageUrl = updatedImageUrl;
-      return product.save();
+      return product.save()
     })
     .then(result => {
       console.log('UPDATED PRODUCT!');
@@ -77,10 +77,7 @@ exports.postEditProduct = (req, res, next) => {
 
 exports.getProducts = (req, res, next) => {
   Product.find()
-    // .select('title price -_id')
-    // .populate('userId', 'name')
     .then(products => {
-      console.log(products);
       res.render('admin/products', {
         prods: products,
         pageTitle: 'Admin Products',
