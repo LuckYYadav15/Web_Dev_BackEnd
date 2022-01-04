@@ -1,5 +1,5 @@
 const User = require('../models/user');
-const cookieParser = require('cookie-parser');
+//const cookieParser = require('cookie-parser');
 
 exports.getLogin = (req, res, next) => {
     res.render('auth/login', {
