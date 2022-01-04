@@ -1,10 +1,14 @@
+const cookieParser = require('cookie-parser');
+
 exports.getLogin = (req, res, next) => {
+    const isLoggedIn = req.get('Cookie').split('=')[1] === 'true';
     res.render('auth/login', {
-      pageTitle: 'Login',
-      path: '/login',
+        path: '/login',
+        pageTitle: 'Login',
+        isAuthenticated: isLoggedIn
     });
 };
-
 exports.postLogin = (req, res, next) => {
+    res.cookie("loggedIn", 'true');
     res.redirect('/');
-  };
+};
