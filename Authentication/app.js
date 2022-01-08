@@ -24,6 +24,8 @@ const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 const authRoutes = require('./routes/auth');
 
+app.use(compression());
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -56,19 +58,8 @@ app.use(errorController.get404);
 mongoose
   .connect(MONGODB_URI)
   .then(result => {
-    User.findOne().then(user => {
-      if (!user) {
-        const user = new User({
-          name: 'Raw',
-          email: 'raw@gmail.com',
-          cart: {
-            items: []
-          }
-        });
-        user.save();
-      }
-    });
-    app.listen(5000);
+    // app.listen(5000);
+    app.listenerCount(process.env.PORT || 3000);
   })
   .catch(err => {
     console.log(err);
