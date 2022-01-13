@@ -7,7 +7,7 @@
     "start": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lucky Yadav",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
